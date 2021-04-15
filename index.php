@@ -14,7 +14,7 @@ $response = curl_exec($ch);
 
 curl_close($ch);
 $data = json_decode($response);
-echo "La temperatura de lleida es: " . $data->main->temp . " ºC\n";
+echo "La temperatura de lleida es: " . $data->main->temp . " ºC<br>";
 
 // Londres
 $googleApiUrl2 = "http://api.openweathermap.org/data/2.5/weather?q=London&appid=cdc8225afaa584c0dbf32b57f6b0ed0e&units=metric";
@@ -31,6 +31,6 @@ $response = curl_exec($ch);
 
 curl_close($ch);
 $data2 = json_decode($response);
-echo "La temperatura de Londres es: " . $data2->main->temp . " ºC\n";
+echo "La temperatura de Londres es: " . $data2->main->temp . " ºC<br>";
 echo "La diferencia es de: " . abs($data->main->temp - $data2->main->temp) . " ºC";
 ?>
