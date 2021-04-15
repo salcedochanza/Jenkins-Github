@@ -16,3 +16,11 @@ curl_close($ch);
 $data = json_decode($response);
 echo "La temperatura de lleida es: " . $data->main->temp . " ºC";
 ?>
+<html>
+    <head>
+        <title>untitled page</title>	
+    </head>
+    <body>
+        <?php echo "La temperatura de lleida es: " . $data->main->temp . " ºC"; ?>
+    </body>
+</html>
